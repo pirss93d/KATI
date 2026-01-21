@@ -369,7 +369,7 @@ body {
 }
 
 .main_block-one {
-  margin: 0 auto 0 auto;
+  margin: 0 auto ;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -395,7 +395,7 @@ body {
 
   display: flex;
   justify-content: space-around;
-  max-width: 400px;
+max-width: 475px;
   height: 96px;
 }
 /* From Uiverse.io by bhaveshxrawat */
