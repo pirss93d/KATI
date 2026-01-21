@@ -365,15 +365,17 @@ template {
 /* $$#@!@#@!#! */
 
 body {
-  background-color: rgb(52, 55, 56);
+  background-color: rgb(70, 71, 71);
 }
 
 .main_block-one {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   max-width: 420px;
   height: 1200px;
 
-  border: 4px solid #fff;
   background: linear-gradient(-45deg, #8e44ad, #f1a603, #9b59b6, #ffffff);
   background-size: 400% 400%;
   z-index: -1;
@@ -390,7 +392,10 @@ body {
     background-position: 0% 50%;
   }
 }
-
+.block_one-card {
+  width: 200px;
+  height: 200px;
+}
 /* From Uiverse.io by bhaveshxrawat */
 .card {
   font-family: "digital";
@@ -418,11 +423,7 @@ body {
   content: "";
   position: absolute;
   width: 100px;
-  background-image: linear-gradient(
-    180deg,
-    rgb(0, 183, 255),
-    rgb(255, 48, 255)
-  );
+  background-image: linear-gradient(180deg, rgb(3, 179, 248), rgb(6, 219, 247));
   height: 130%;
   animation: rotBGimg 3s linear infinite;
   transition: all 0.2s linear;
@@ -452,4 +453,12 @@ body {
     rgb(255, 255, 255)
   );
   animation: rotBGimg 1.5s linear infinite;
+}
+
+.main_logo {
+  margin: 0 auto;
+  color: #fff;
+  font-family: "digital";
+  font-size: 10px;
+  font-weight: 400;
 }
