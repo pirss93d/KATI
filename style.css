@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "serati_italic";
+  src: url(.//fond/Serati-Italic.otf);
+}
+@font-face {
+  font-family: "serati_regular";
+  src: url(.//fond/Serati-Regular.otf);
+}
+@font-face {
+  font-family: "digital";
+  src: url(.//fond/DigitalUpscaledPixel-Regular.otf);
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -360,15 +372,31 @@ body {
   margin: 0 auto;
   max-width: 420px;
   height: 1200px;
-  background-color: blueviolet;
+
   border: 4px solid #fff;
+  background: linear-gradient(-45deg, #8e44ad, #f1a603, #9b59b6, #ffffff);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientShift 10s ease infinite;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* From Uiverse.io by bhaveshxrawat */
 .card {
+  font-family: "digital";
   cursor: pointer;
-  width: 190px;
-  height: 254px;
+  width: 150px;
+  height: 200px;
   background: #07182e;
   position: relative;
   display: flex;
@@ -378,10 +406,12 @@ body {
   border-radius: 20px;
 }
 
-.card h2 {
+.card h4 {
+  font-size: 10px;
   z-index: 1;
   color: white;
-  font-size: 2em;
+  letter-spacing: 2px;
+  /* font-size: 2em; */
 }
 
 .card::before {
@@ -415,7 +445,11 @@ body {
   inset: 5px;
   border-radius: 15px;
 }
-/* .card:hover:before {
-  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
-  animation: rotBGimg 3.5s linear infinite;
-} */
+.card:hover:before {
+  background-image: linear-gradient(
+    180deg,
+    rgb(255, 255, 255),
+    rgb(255, 255, 255)
+  );
+  animation: rotBGimg 1.5s linear infinite;
+}
