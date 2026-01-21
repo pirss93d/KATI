@@ -393,8 +393,9 @@ body {
   }
 }
 .block_one-card {
-  width: 200px;
-  height: 200px;
+  display: flex;
+  width: 400px;
+  height: 400px;
 }
 /* From Uiverse.io by bhaveshxrawat */
 .card {
@@ -456,7 +457,7 @@ body {
 }
 
 .main_logo {
-  margin: 0 auto;
+  margin: 10px auto;
   color: #fff;
   font-family: "digital";
   font-size: 10px;
