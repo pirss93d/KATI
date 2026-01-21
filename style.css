@@ -365,6 +365,7 @@ body {
 }
 
 .card {
+  cursor: pointer;
   width: 190px;
   height: 120px;
   padding: 0.5rem;
