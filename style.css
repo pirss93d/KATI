@@ -364,63 +364,58 @@ body {
   border: 4px solid #fff;
 }
 
+/* From Uiverse.io by bhaveshxrawat */
 .card {
   cursor: pointer;
   width: 190px;
-  height: 120px;
-  padding: 0.5rem;
-  background: rgba(198, 198, 198, 0.34);
-  border-radius: 8px;
-  backdrop-filter: blur(5px);
-  border-bottom: 3px solid rgba(255, 255, 255, 0.44);
-  border-left: 2px rgba(255, 255, 255, 0.545) outset;
-  box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.28);
-  transform: skewX(10deg);
-  transition: 0.4s;
-  overflow: hidden;
-  color: white;
-}
-
-.card:hover {
   height: 254px;
-  transform: skew(0deg);
-}
-
-.align {
-  padding: 1rem;
+  background: #07182e;
+  position: relative;
   display: flex;
-  flex-direction: row;
-  gap: 5px;
-  align-self: flex-start;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-.red {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ff605c;
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.28);
+.card h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
 }
 
-.yellow {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ffbd44;
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.28);
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 183, 255),
+    rgb(255, 48, 255)
+  );
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
 }
 
-.green {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #00ca4e;
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.28);
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.card h1 {
-  text-align: center;
-  margin: 1.3rem;
-  color: rgb(218, 244, 237);
-  text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+.card::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 5px;
+  border-radius: 15px;
 }
+/* .card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */
