@@ -369,11 +369,11 @@ body {
 }
 
 .main_block-one {
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 420px;
+  max-width: 475px;
   height: 1200px;
   background: linear-gradient(-45deg, #8e44ad, #f1a603, #9b59b6, #ffffff);
   background-size: 400% 400%;
@@ -392,10 +392,10 @@ body {
   }
 }
 .block_one-card {
-  margin: 0 auto 0 auto;
+
   display: flex;
   justify-content: space-around;
-  width: 400px;
+  max-width: 400px;
   height: 96px;
 }
 /* From Uiverse.io by bhaveshxrawat */
