@@ -477,13 +477,24 @@ body {
 .modalActive {
   position: absolute;
   max-width: 475px;
-  height: 300px;
+  height: 475px;
   /* top: calc(50% - 250px);
   left: calc(50% - 175px); */
 
   background-color: rgba(92, 90, 90, 0.9);
+  animation: fadeInScale 0.5s forwards;
 
   /* padding: 40px 20px; */
+}
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px); /* Появление сверху с масштабом */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 .modalClose {
   position: absolute;
@@ -495,9 +506,13 @@ body {
 }
 
 .modalWindow {
-  width: 100%;
+  margin: 0 auto;
+  max-width: 60%;
+  max-height: 475px;
+  background-color: #748373;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 /* MODAL End */
 
@@ -505,10 +520,20 @@ body {
 .modal_document {
   border: 1px solid #f1a603;
   color: #fff;
-  width: 400px;
-  height: 25px;
+  width: 120px;
+  height: 120px;
+  border: 0.5px solid #e90505;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .modal_document:hover {
   opacity: 0.5;
+}
+
+.modal_document:nth-child(3) {
+  margin-top: 25px;
+}
+.modal_document:nth-child(4) {
+  margin-top: 25px;
 }
 /* End Modal Document */
