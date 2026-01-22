@@ -10,6 +10,16 @@
   font-family: "digital";
   src: url(.//fond/DigitalUpscaledPixel-Regular.otf);
 }
+@font-face {
+  font-family: "lsadora Cyr";
+  src: url(.//fond/Isadora\ Cyr.ttf);
+}
+
+@font-face {
+  font-family: "BerlinSansFBCyrillic-Regular";
+  src: url(.//fond/BerlinSansFBCyrillic-Regular.ttf);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -565,21 +575,21 @@ body {
 .modal_Two,
 .modal_Three,
 .modal_Four {
+  font-family: "BerlinSansFBCyrillic-Regular";
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   text-align: center;
   width: 150px;
-  font-family: "digital";
+  line-height: 1.2;
+
   /* padding: 10px 20px; */
   border: none;
-
-  font-size: 8px;
-  color: #e4ce0a;
+  font-size: 12px;
+  color: #fafafa;
   border-radius: 7px;
-  letter-spacing: 2px;
-  font-weight: 200;
+  letter-spacing: 3px;
+  font-weight: 400;
   text-transform: uppercase;
   transition: 0.2s;
   transition-property: box-shadow;
