@@ -469,7 +469,7 @@ body {
   display: none;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
-  width: 100%;
+  width: 475px;
   height: 100%;
   z-index: 1;
   cursor: pointer;
@@ -494,8 +494,21 @@ body {
   cursor: pointer;
 }
 
-/* .modalWindow {
+.modalWindow {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-} */
+  flex-wrap: wrap;
+}
 /* MODAL End */
+
+/* Modal Document */
+.modal_document {
+  border: 1px solid #f1a603;
+  color: #fff;
+  width: 400px;
+  height: 25px;
+}
+.modal_document:hover {
+  opacity: 0.5;
+}
+/* End Modal Document */
