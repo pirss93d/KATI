@@ -497,22 +497,18 @@ body {
   }
 }
 .modalClose {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 
 .modalWindow {
-  margin: 0 auto;
-  max-width: 60%;
+  max-width: 100%;
   max-height: 475px;
   background-color: #748373;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 /* MODAL End */
 
@@ -522,7 +518,6 @@ body {
   color: #fff;
   width: 120px;
   height: 120px;
-  border: 0.5px solid #e90505;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -530,10 +525,4 @@ body {
   opacity: 0.5;
 }
 
-.modal_document:nth-child(3) {
-  margin-top: 25px;
-}
-.modal_document:nth-child(4) {
-  margin-top: 25px;
-}
 /* End Modal Document */
