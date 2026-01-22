@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,21 +18,20 @@
             <h4>Файлы</h4>
           </div>
         </div>
-        <div class="modalBackground">
-          <div class="modalActive">
-            <div class="modalClose">За</div>
-            <div class="modalWindow">
-              <div class="modal_document">
-                <p class="heading">Методические рекомендации</p>
-              </div>
-              <div class="modal_document">
-                <p class="heading">Муниципальные документы</p>
-              </div>
-              <div class="modal_document">
-                <p class="heading">Региональные документы</p>
-              </div>
-              <div class="modal_document">
-                <p class="heading">Федеральные документы</p>
+        <div id="modal" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <button id="closeModal">&times;1</button>
+
+              <div class="modal-body">
+                <div class="modal_block-one">
+                  <div class="modal_One">Методические рекомендации</div>
+                  <div class="modal_Two">Муниципальные документы</div>
+                </div>
+                <div class="modal_block-two">
+                  <div class="modal_Three">Региональные документы</div>
+                  <div class="modal_Four">Федеральные документы</div>
+                </div>
               </div>
             </div>
           </div>

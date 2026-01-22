@@ -1,23 +1,26 @@
-const trigger = document.querySelector("#card_1");
-const modalBg = document.querySelector(".modalBackground");
-const modalClose = document.querySelector(".modalClose");
-const body = document.body;
-// Открытие
+const modal = document.getElementById("modal");
+const openBtn = document.getElementById("card_1"); //Кнопка (Документы)
+const closeBtn = document.getElementById("closeModal");
 
-trigger.addEventListener("click", () => {
-  modalBg.style.display = "block";
-  body.style.overflow = "hidden";
-});
-// Закрытие по крестику или фону
-modalClose.addEventListener("click", () => {
-  modalBg.style.display = "none";
-  body.style.overflow = "";
-});
-modalBg.addEventListener("click", (e) => {
-  if (e.target === modalBg) {
-    modalBg.style.display = "none";
-    body.style.overflow = "";
+openBtn.onclick = () => modal.classList.add("active");
+closeBtn.onclick = () => modal.classList.remove("active");
+
+modal.onclick = (e) => {
+  if (e.target === modal) modal.classList.remove("active");
+};
+
+document.onkeydown = (e) => {
+  if (e.key === "Escape" && modal.classList.contains("active")) {
+    modal.classList.remove("active");
   }
-});
+};
+
+// Блокировка скролла body
+function lockScroll() {
+  document.body.style.overflow = modal.classList.contains("active")
+    ? "hidden"
+    : "";
+}
+modal.addEventListener("transitionend", lockScroll);
 
 console.log("Скрипт на открытие окна загружен!!!");

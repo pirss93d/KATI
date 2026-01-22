@@ -363,13 +363,16 @@ template {
 }
 
 /* $$#@!@#@!#! */
-
 body {
-  background-color: rgb(70, 71, 71);
+  background-color: #070707;
 }
 
-.main_block-one {
+.main {
   margin: 0 auto;
+  max-width: 475px;
+}
+.main_block-one {
+  /* margin: 0 auto 0 auto; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -394,6 +397,7 @@ body {
 .block_one-card {
   display: flex;
   justify-content: space-around;
+  margin-top: 40px;
   max-width: 475px;
   height: 96px;
 }
@@ -457,34 +461,48 @@ body {
 }
 
 .main_logo {
-  margin: 10px auto;
+  margin: 10px auto 0 auto;
   color: #fff;
   font-family: "digital";
   font-size: 10px;
   font-weight: 400;
 }
 
-/* MODAL  */
-.modalBackground {
+/* 21231321 */
+
+.modal {
   display: none;
-  background: rgba(0, 0, 0, 0.8);
   position: fixed;
-  width: 475px;
-  height: 100%;
-  z-index: 1;
-  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
-.modalActive {
-  position: absolute;
-  max-width: 475px;
-  height: 475px;
-  /* top: calc(50% - 250px);
-  left: calc(50% - 175px); */
 
-  background-color: rgba(92, 90, 90, 0.9);
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.modal-dialog {
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: 1.75rem auto;
+  width: 500px;
+}
+
+.modal-content {
+  /* background: white; */
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  overflow: auto;
   animation: fadeInScale 0.5s forwards;
-
-  /* padding: 40px 20px; */
 }
 @keyframes fadeInScale {
   from {
@@ -496,33 +514,111 @@ body {
     transform: scale(1) translateY(0);
   }
 }
-.modalClose {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    width: 95vw;
+    margin: 1rem;
+  }
 }
 
-.modalWindow {
-  max-width: 100%;
-  max-height: 475px;
-  background-color: #748373;
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+  }
+}
+
+/* MODAL Style */
+
+.modal-body {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 300px;
 }
-/* MODAL End */
 
-/* Modal Document */
-.modal_document {
-  border: 1px solid #f1a603;
-  color: #fff;
-  width: 120px;
-  height: 120px;
+.modal_block-one {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+}
+.modal_block-two {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+}
+/* .modal_One {
+  width: 150px;
+  height: 100px;
+  background: #07182e;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+} */
+.modal_One,
+.modal_Two,
+.modal_Three,
+.modal_Four {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  font-family: "digital";
+  /* padding: 10px 20px; */
+  border: none;
+
+  font-size: 8px;
+  color: #e4ce0a;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  text-transform: uppercase;
+  transition: 0.2s;
+  transition-property: box-shadow;
   cursor: pointer;
-  border-radius: 5px;
-}
-.modal_document:hover {
-  opacity: 0.5;
+  line-height: normal;
 }
 
-/* End Modal Document */
+.modal_One,
+.modal_Two,
+.modal_Three,
+.modal_Four {
+  background: rgb(0, 140, 255);
+  box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+.modal_One:hover {
+  box-shadow:
+    0 0 5px rgb(0, 140, 255),
+    0 0 25px rgb(0, 140, 255),
+    0 0 50px rgb(0, 140, 255),
+    0 0 100px rgb(0, 140, 255);
+}
+.modal_Two:hover {
+  box-shadow:
+    0 0 5px rgb(0, 140, 255),
+    0 0 25px rgb(0, 140, 255),
+    0 0 50px rgb(0, 140, 255),
+    0 0 100px rgb(0, 140, 255);
+}
+.modal_Three:hover {
+  box-shadow:
+    0 0 5px rgb(0, 140, 255),
+    0 0 25px rgb(0, 140, 255),
+    0 0 50px rgb(0, 140, 255),
+    0 0 100px rgb(0, 140, 255);
+}
+.modal_Four:hover {
+  box-shadow:
+    0 0 5px rgb(0, 140, 255),
+    0 0 25px rgb(0, 140, 255),
+    0 0 50px rgb(0, 140, 255),
+    0 0 100px rgb(0, 140, 255);
+}
