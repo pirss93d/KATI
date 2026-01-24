@@ -373,6 +373,7 @@ template {
 }
 
 /* $$#@!@#@!#! */
+
 body {
   background-color: #070707;
 }
@@ -387,7 +388,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   max-width: 475px;
-  height: 1200px;
+  height: 100%;
   background: linear-gradient(-45deg, #8e44ad, #f1a603, #9b59b6, #ffffff);
   background-size: 400% 400%;
   z-index: -1;
@@ -631,4 +632,67 @@ body {
     0 0 25px rgb(0, 140, 255),
     0 0 50px rgb(0, 140, 255),
     0 0 100px rgb(0, 140, 255);
+}
+
+/* страница рекомендации */
+
+.recomend {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  background-color: rebeccapurple;
+  border: 1px solid #f1a603;
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.doc-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.doc-icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 1rem;
+}
+.doc-name {
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+.doc-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Переходы и ссылки на главной страницы */
+
+/* Реализация плавных переходов */
+@view-transition {
+  navigation: auto;
+}
+/* Реализация плавных переходов . На мобиле off */
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
 }
